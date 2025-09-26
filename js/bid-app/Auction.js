@@ -1,5 +1,5 @@
 //makes it able to use Bid class
-import Bid from "./Bid.js";
+import Bid from "./Bid";
 
 class Auction{  
     constructor(item){
@@ -33,19 +33,20 @@ class Auction{
         document.getElementById('bid-list').appendChild(bidList);
 
     }
-    highestBid(highestPlace){
+    highestBid(){
         //if there aren't any bids don't do anything
         if (this.bids.length === 0) return null;
         //figure out which bid is the highest
         const highest = this.bids.reduce((max, bid) => bid.amount > max.amount ? bid : max);
         //display the highest bid
-        highestPlace.innerHTML = `${highest.bidder} with $${highest.amount}`;
+        document.getElementById('bid-topspot').innerHTML = `${highest.bidder} with $${highest.amount}`;
         //return highest
         return highest;
     }
     clearBid(){
         //empty the displayed bid list
         document.getElementById('bid-list').innerHTML = ``;
+        document.getElementById('bid-topspot').innerHTML = ``;
         //set bids array to empty
         this.bids = [];
         //update local storage to be empty

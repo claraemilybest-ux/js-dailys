@@ -6,11 +6,8 @@ const placeBidBtn = document.getElementById("place-bid");
 const clearBidBtn = document.getElementById("clear-bid");
 //set up the auction
 const auctionItem = new Auction("Cookie");
-//create place for highest bid to display
-const highestPlace = document.createElement('p');
-document.getElementById('bid-topspot').appendChild(highestPlace);
 //put preverse highest bid up
-auctionItem.highestBid(highestPlace);
+auctionItem.highestBid();
 
 //when bid button pressed
 placeBidBtn.addEventListener("click", () => {
@@ -24,7 +21,7 @@ placeBidBtn.addEventListener("click", () => {
     };
     //call placeBid function
     auctionItem.placeBid(bidderName, bidAmount);
-    auctionItem.highestBid(highestPlace);
+    auctionItem.highestBid();
     //empty text feilds 
     bidder.value = '';
     amount.value = '';
