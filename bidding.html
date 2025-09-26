@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bidding App</title>
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body class="h-svh w-svw p-5">
+    <a href="/index.html" class="text-white bg-red-700 p-1 rounded-sm">HomeWork</a>
+
+    <h1 class="text-2xl underline font-bold">Bid App</h1>
+    <ul id="bid-list" class="flex flex-col">
+    </ul>
+
+    <h2 class="text-xl underline font-bold">Highest Bidder</h2>
+    <div id="bid-topspot">
+        
+    </div>
+    <input type="text" placeholder="Name" id="bidder-name" class="border border-blue-600">
+    <input type="text" placeholder="Bid Amount" id="bid-amount" class="border border-blue-600">
+    <br>
+    <button id="place-bid" class="text-white bg-gray-700 m-2 p-2 rounded-sm">Bid</button> 
+    <button id="clear-bid" class="text-white bg-gray-700 m-2 p-2 rounded-sm">Clear All Bids</button>
+    <script src="./js/bidding.js" type="module"></script>
+  </body>
+</html>
